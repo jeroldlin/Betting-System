@@ -110,6 +110,7 @@ function setInputFetcher(){
 		});
 	};
 	fetchInput("clickToHowMany", "money", "playerMoneyDefault");
+	fetchInput("clickToHowMany", "profit", "profitGoal");
 	fetchInput("clickToChooseStyle", "round", "gamesPlayed");
 	fetchInput("clickToChooseStyle", "test", "testRound");
 	changeInput("Blackjack", "48", "winRate");
