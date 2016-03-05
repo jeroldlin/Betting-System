@@ -13,6 +13,7 @@
    Date:                
 
 -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Betting system simulator</title>
    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
    <link type="text/css" href="Style.css" rel="stylesheet" />
@@ -50,7 +51,7 @@
     <div class="col-sm-6 beCentered">
             <h1>Welcome</h1><br />
             Have you read articles saying that how people have wrote programs to simulate betting in a casino?<br /><br />
-            Well, this is a project to share a free program so you don't have to write it. You can run as much bets as you want - as long as your device can handle it. (1 million bets are usually enough.)
+            Well, this is a project to share a free program so you don't have to write it. You can run as much bets as you want - as long as your device can handle it. (1 million bets are usually enough.)<br />
     </div><!--
  --><div class="col-sm-6 beCentered">
     	<h3>Let's Start</h3><br />
@@ -62,11 +63,12 @@
 <!-- Simple or Sandbox -->
 <div class="center" id="chooseMode">
     <div class="col-sm-6 beCentered">
-            <img src="12282029341391935700wealthy person with glasses2.svg.med.png" />
+            <img src="player.png" /><br />
+			In this simluation, your are a noble man looking to make his fortune, choose your mode to begin.
     </div><!--
  --><div class="col-sm-6 beCentered">
     	<h3>Choose Game</h3><br />
-        <button type="button" class="btn btn-warning btn-lg clickToChooseGame">Simple</button><br />
+        <button type="button" class="btn btn-warning btn-lg clickToChooseGame">Guided</button><br />
         <br />
         <button type="button" class="btn btn-warning btn-lg clickToSandBox">Sandbox</button>
     </div>
@@ -76,7 +78,8 @@
 <!-- Choose Game -->
 <div class="center" id="chooseGame">
     <div class="col-sm-6 beCentered">
-            <img src="12282029341391935700wealthy person with glasses2.svg.med.png" />
+            <img src="player.png" /><br />
+			You studied hard and achieved the best odd against house, which game would you like to play?
     </div><!--
  --><div class="col-sm-6 beCentered">
     	<h3>Choose Game Type</h3><br />
@@ -93,7 +96,8 @@
 <!-- How Much -->
 <div class="center" id="howMuch">
     <div class="col-sm-6 beCentered">
-            <img src="12282029341391935700wealthy person with glasses2.svg.med.png" />
+            <img src="player.png" /><br />
+			Tell me, how much money you want to invest for each test?
     </div><!--
  --><div class="col-sm-6 beCentered">
     	<h3>How much money?</h3><br />
@@ -108,7 +112,8 @@
 <!-- How Many Tests -->
 <div class="center" id="howMany">
     <div class="col-sm-6 beCentered">
-            <img src="12282029341391935700wealthy person with glasses2.svg.med.png" />
+            <img src="player.png" /><br />
+			You can't stay in casinos forever, lets set a limit to how many bets you want to run.
     </div><!--
  --><div class="col-sm-6 beCentered">
     	<h3>How many bets per test?</h3><br />
@@ -126,15 +131,16 @@
 <!-- Choose Style -->
 <div class="center" id="chooseStyle">
     <div class="col-sm-6 beCentered">
-            <img src="12282029341391935700wealthy person with glasses2.svg.med.png" />
+            <img src="player.png" /><br />
+			At last, pick one of the popular betting strategies from human history.
     </div><!--
  --><div class="col-sm-6 beCentered">
     	<h3>Choose mode</h3><br />
-        <button type="button" class="btn btn-warning btn-lg Martingale">Martingale</button><br />
+        <button type="button" class="btn btn-warning btn-lg Martingale clickToResult" onclick="myFunction();return false;">Martingale</button><br />
         <br />
-        <button type="button" class="btn btn-warning btn-lg Reverse_Martingale">Reverse Martingale</button><br />
+        <button type="button" class="btn btn-warning btn-lg Reverse_Martingale clickToResult" onclick="myFunction();return false;">Reverse Martingale</button><br />
         <br />
-        <button type="button" class="btn btn-warning btn-lg Progressive">Progressive 2 Level ($10 &amp; $20)</button><br />
+        <button type="button" class="btn btn-warning btn-lg Progressive clickToResult" onclick="myFunction();return false;">Progressive 2 Level ($10 &amp; $20)</button><br />
         <br />
     </div>
 </div>
@@ -149,25 +155,29 @@
 
 <!-- Results -->
 <div class="center" id="showResult">
-	<br />
-	<br />
-	<div class="col-sm-12"> <button onclick="myFunction();return false;" class="btn btn-warning btn-lg">Calculate again</button></div>
-	<br />
-	<br />
-	<br />
-	<div class="col-sm-12" id="result"></div>
+	<div>
+		<br />
+		<br />
+		<div class="col-sm-12"> <button onclick="myFunction();return false;" class="btn btn-warning btn-lg">Calculate again</button></div>
+		<br />
+		<br />
+		<br />
+		<div class="col-sm-6" id="result"></div>
+		<br />
+		<div class="col-sm-6" id="resultPic"></div>
+		<br />
+	</div>
 </div>
 <!-- Results (end)-->
-<!-- nav bar  -->
-<div id="Navbar">
-
+<!-- About  -->
+<div class="center" id="about">
+	There will be updates
 </div>
 <!-- nav bar  (end)-->
 </body>
 
 <footer>
 	<div id="leftFooter">	
-		instruction
 	</div>
 	<div id="rightFooter">
     	<span id="rightFooterText">
