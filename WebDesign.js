@@ -5,6 +5,7 @@ function initialPage(){
 	setSandbox();
 	setInputFetcher();
 	setNavigation();
+	navbarAutoCollapse();
 }
 
 
@@ -60,7 +61,37 @@ function setNavigation(){
 	changeToPageFadeStyle("clickToSandBox", "sandBox");
 	changeToPageFadeStyle("clickToAbout", "about");
 	changeToPageFadeStyle("clickToResult", "showResult");
-}//Navigation modules
+}
+//Navigation modules
+
+function navbarAutoCollapse(){
+	$(document).ready(function(){
+		$("#menuButton").blur(function(){
+			setTimeout(function(){ $("#myNavbar").collapse("hide") }, 200);
+		});
+	});
+	$(document).ready(function(){//overwrite bootstrap css --better for phone & desktop
+		$("#menuButton").on('mouseenter', function () {
+			$("#menuButton").css("background-color", "black");
+		});
+		$("#menuButton").on('mouseleave', function () {
+			$("#menuButton").css("background-color", "#orange");
+		});
+		$("#myNavbar").on('hidden.bs.collapse', function () {
+			$("#menuButton").css("background-color", "#orange");
+			$("#menuButton").on('mouseleave', function () {
+				$("#menuButton").css("background-color", "#orange");
+			});
+		});
+		$("#myNavbar").on('show.bs.collapse', function () {
+			$("#menuButton").css("background-color", "black");
+			$("#menuButton").on('mouseleave', function () {
+				$("#menuButton").css("background-color", "orange");
+			});
+		});
+	});
+}
+//Menu button improvement
 
 function setInputFetcher(){
 	function fetchInput(buttonClass, valueID, valueDestination){
