@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- 
+
+   Betting system simulator
+   
+   Author: Jerry Lin
+   Date:                
+
+-->
+   <title>Betting system simulator</title>
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+   <link type="text/css" href="Style.css" rel="stylesheet" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <script src="WebDesign.js" type="text/javascript"></script>
+   <script src="BettingSystemSimulator.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!-- nav bar  -->
+<div id="Navbar">
+<nav class="navbar navbar-inverse" id="Nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id="menuButton">
+      	Menu                        
+      </button>
+      <a class="navbar-brand clickToWelcome" href="#" style="color:white">Betting System Simulator</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#" id="NavLink" class="clickToWelcome">Home</a></li>
+        <li><a href="#" id="NavLink" class="clickToSandBox">Sandbox Mode</a></li>
+        <li><a href="#" id="NavLink" class="clickToAbout">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<!-- nav bar  (end)-->
+
+<!-- Homepage -->
+<div class="center" id="welcome">
+    <div class="col-sm-6 beCentered">
+            <h1>Welcome</h1><br />
+            Have you read articles saying that how people have wrote programs to simulate betting in a casino?<br /><br />
+            Well, this is a project to share a free program so you don't have to write it. You can run as much bets as you want - as long as your device can handle it. (1 million bets are usually enough.)
+    </div><!--
+ --><div class="col-sm-6 beCentered">
+    	<h3>Let's Start</h3><br />
+        <button type="button" class="btn btn-warning clickToChooseMode">Start</button>
+    </div>
+</div>
+<!-- Homepage (end)-->
+
+<!-- Simple or Sandbox -->
+<div class="center" id="chooseMode">
+    <div class="col-sm-6 beCentered">
+            <img src="12282029341391935700wealthy person with glasses2.svg.med.png" />
+    </div><!--
+ --><div class="col-sm-6 beCentered">
+    	<h3>Choose Game</h3><br />
+        <button type="button" class="btn btn-warning btn-lg clickToChooseGame">Simple</button><br />
+        <br />
+        <button type="button" class="btn btn-warning btn-lg clickToSandBox">Sandbox</button>
+    </div>
+</div>
+<!-- Simple or Sandbox (end)-->
+
+<!-- Choose Game -->
+<div class="center" id="chooseGame">
+    <div class="col-sm-6 beCentered">
+            <img src="12282029341391935700wealthy person with glasses2.svg.med.png" />
+    </div><!--
+ --><div class="col-sm-6 beCentered">
+    	<h3>Choose Game Type</h3><br />
+        <button type="button" class="btn btn-warning btn-lg clickToHowMuch Blackjack">Blackjack</button><br />
+        <br />
+        <button type="button" class="btn btn-warning btn-lg clickToHowMuch Roulette">Roulette</button><br />
+        <br />
+        <button type="button" class="btn btn-warning btn-lg clickToHowMuch Baccarat">Baccarat</button><br />
+        <br />
+    </div>
+</div>
+<!-- Choose Game (end)-->
+
+<!-- How Much -->
+<div class="center" id="howMuch">
+    <div class="col-sm-6 beCentered">
+            <img src="12282029341391935700wealthy person with glasses2.svg.med.png" />
+    </div><!--
+ --><div class="col-sm-6 beCentered">
+    	<h3>How much money?</h3><br />
+        <input type="text" class="bfh-number" id="money" maxlength="10" size="10" value="200"/><br />
+        <br />
+        <button type="button" class="btn btn-warning btn-lg clickToHowMany">Enter</button><br />
+        <br />
+    </div>
+</div>
+<!-- How Much (end)-->
+
+<!-- How Many Tests -->
+<div class="center" id="howMany">
+    <div class="col-sm-6 beCentered">
+            <img src="12282029341391935700wealthy person with glasses2.svg.med.png" />
+    </div><!--
+ --><div class="col-sm-6 beCentered">
+    	<h3>How many bets per test?</h3><br />
+        <input type="text" class="bfh-number" id="round" maxlength="10" size="10" value="50"/><br />
+        <br />
+        <h3>How many tests do you want to do?</h3><br />
+        <input type="text" class="bfh-number" id="test" maxlength="10" size="10" value="10"/><br />
+        <br />
+        <button type="button" class="btn btn-warning btn-lg clickToChooseStyle">Enter</button><br />
+        <br />
+    </div>
+</div>
+<!-- How Many Tests (end)-->
+
+<!-- Choose Style -->
+<div class="center" id="chooseStyle">
+    <div class="col-sm-6 beCentered">
+            <img src="12282029341391935700wealthy person with glasses2.svg.med.png" />
+    </div><!--
+ --><div class="col-sm-6 beCentered">
+    	<h3>Choose mode</h3><br />
+        <button type="button" class="btn btn-warning btn-lg Martingale">Martingale</button><br />
+        <br />
+        <button type="button" class="btn btn-warning btn-lg Reverse_Martingale">Reverse Martingale</button><br />
+        <br />
+        <button type="button" class="btn btn-warning btn-lg Progressive">Progressive 2 Level ($10 &amp; $20)</button><br />
+        <br />
+    </div>
+</div>
+<!-- Choose Style (end)-->
+
+<!-- Sandbox Mode -->
+<div class="center" id="sandBox">
+    <div class="col-sm-12" id="sandBoxContent">
+    </div>
+</div>
+<!-- Sandbox Mode (end)-->
+
+<!-- Results -->
+<div class="center" id="showResult">
+	<br />
+	<br />
+	<div class="col-sm-12"> <button onclick="myFunction();return false;" class="btn btn-warning btn-lg">Calculate again</button></div>
+	<br />
+	<br />
+	<br />
+	<div class="col-sm-12" id="result"></div>
+</div>
+<!-- Results (end)-->
+<!-- nav bar  -->
+<div id="Navbar">
+
+</div>
+<!-- nav bar  (end)-->
+</body>
+
+<footer>
+	<div id="leftFooter">	
+		instruction
+	</div>
+	<div id="rightFooter">
+    	<span id="rightFooterText">
+			Copyright &copy; by 2015 Jerry Lin</a>
+        </span>
+	</div>
+</footer>
+</html>

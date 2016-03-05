@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+html   {height:100%}
+
+body      {background-image:	;
+		min-height:			98%;
+		margin:				0;}
+		
+footer    {background-color:	white;
+		position:			fixed;
+		height:				50px;}
+
+#leftFooter       {background-color:	orange;
+				color:				white;
+				display:			flex;
+				height:				50px;
+				width:				28%;
+				float:				left;
+				align-items:		center;
+				justify-content:	center;}
+				
+#rightFooter     {background-color:	orange;
+				color:				white;
+				display:			block;
+				padding:			10px;
+				padding-top:		15px;
+				height:				50px;
+				width:				71.5%;
+				float:				right;
+				text-align:			right;}
+
+#Navbar	     {z-index:			1;}
+
+#Nav  	     {position:			relative;
+			background-color:	orange;
+			color:				white;
+			border-style:		none;
+			top:				-300;
+			z-index:			1;}
+
+#myNavbar    {background-color:	orange;
+			color:				white;
+			border-style:		none;}
+
+#NavLink     {background-color:	orange;
+			color:				white;
+			border-style:		none;}
+
+#menuButton:hover   {background-color:	black;}
+
+.navbar-inverse .navbar-toggle:focus   {background-color:	orange;}
+										
+#NavLink:hover      {background-color:	black;}
+
+					
+.center	     {display:			none;
+			overflow:			auto;
+			margin:				5px;
+			position:			;
+			padding-top:		50px;
+			padding-left:		2%;
+			padding-right:		2%;
+			padding-bottom:		50px;
+			z-index:			-1;}
+
+.beCentered	     {padding-top:		50px;
+				padding-bottom:		50px;
+				text-align:			center;
+				z-index:			;}
+				
+.sandboxHeader  {text-decoration:	underline;
+				font-weight:		heavy;
+				font-size:			120%;
+				}
+.sandboxRow        	{margin: px}
