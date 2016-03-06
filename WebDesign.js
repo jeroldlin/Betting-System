@@ -75,12 +75,12 @@ function navbarAutoCollapse(){
 			$("#menuButton").css("background-color", "black");
 		});
 		$("#menuButton").on('mouseleave', function () {
-			$("#menuButton").css("background-color", "#orange");
+			$("#menuButton").css("background-color", "orange");
 		});
 		$("#myNavbar").on('hidden.bs.collapse', function () {
-			$("#menuButton").css("background-color", "#orange");
+			$("#menuButton").css("background-color", "orange");
 			$("#menuButton").on('mouseleave', function () {
-				$("#menuButton").css("background-color", "#orange");
+				$("#menuButton").css("background-color", "orange");
 			});
 		});
 		$("#myNavbar").on('show.bs.collapse', function () {
