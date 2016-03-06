@@ -143,12 +143,12 @@ function myFunction() {
 		display.innerHTML = display.innerHTML + "In a total of "+(count-1)+" tests.<br />";
 		if (endUp > totalInvest) {
 			display.innerHTML = display.innerHTML + "Player made $"+(endUp - totalInvest)+".<br />";
-			displayPic.innerHTML = '<img src="rich-man-md.png" /><br />Even with odd favors the house, you still won money, Good Job!';
+			displayPic.innerHTML = '<img src="rich-man-md.png" /><br />Even when odds favored the house, you still won money, Good Job!';
 		}else if(endUp < totalInvest){
-			display.innerHTML = display.innerHTML + "Player's cash investment didn't change.<br />";
+			display.innerHTML = display.innerHTML + "Player lost $"+(totalInvest - endUp)+".<br />";
 			displayPic.innerHTML = '<img src="drunk-man-md.png" /><br />You lost money, spent the rest of money on alcohol, and then died on the street.';
 		}else{
-			display.innerHTML = display.innerHTML + "Player lost $"+(totalInvest - endUp)+".<br />";
+			display.innerHTML = display.innerHTML + "Player's cash investment didn't change.<br />";
 			displayPic.innerHTML = "<img src='player.png' /><br />You didn't win any money, nor lose any. You just wasted a lot of time, better luck next time!";
 		}
 		display.innerHTML = display.innerHTML + "<br />------------------------------------------------------------------------------------<br />";
